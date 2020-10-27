@@ -5,9 +5,9 @@ use Illuminate\Support\Str;
 return [
     'baseUrl' => '',
     'production' => false,
-    'siteName' => 'Blog Starter Template',
-    'siteDescription' => 'Generate an elegant blog with Jigsaw',
-    'siteAuthor' => 'Author Name',
+    'siteName' => 'Rafael Hernandez',
+    'siteDescription' => 'I love creating software that empowers SME, join me on my journey.',
+    'siteAuthor' => 'Rafael Hernandez',
 
     // collections
     'collections' => [
