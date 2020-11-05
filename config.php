@@ -3,18 +3,18 @@
 use Illuminate\Support\Str;
 
 return [
-    'baseUrl' => '',
-    'production' => false,
-    'siteName' => 'Rafael Hernandez',
-    'siteDescription' => 'I love creating software that empowers SME, join me on my journey.',
-    'siteAuthor' => 'Rafael Hernandez',
+    'baseUrl'         => '',
+    'production'      => false,
+    'siteName'        => 'Rafael Hernandez',
+    'siteDescription' => 'I love creating software that empowers SME, join me in my journey.',
+    'siteAuthor'      => 'Rafael Hernandez',
 
     // collections
-    'collections' => [
-        'posts' => [
-            'author' => 'Author Name', // Default author, if not provided in a post
-            'sort' => '-date',
-            'path' => 'blog/{filename}',
+    'collections'     => [
+        'posts'      => [
+            'author' => 'Rafael Hernandez', // Default author, if not provided in a post
+            'sort'   => '-date',
+            'path'   => 'blog/{filename}',
         ],
         'categories' => [
             'path' => '/blog/categories/{filename}',
@@ -57,7 +57,38 @@ return [
             ? preg_replace('/\s+?(\S+)?$/', '', $truncated) . '...'
             : $cleaned;
     },
-    'isActive' => function ($page, $path) {
+    'isActive'        => function ($page, $path) {
         return Str::endsWith(trimPath($page->getPath()), trimPath($path));
+    },
+
+    'imageAttribution' => function ($page, $html = false) {
+        $str = '';
+
+        $image_author = $page->image_author;
+        $image_author_url = $page->image_author_url;
+
+        if ($image_author) {
+            $str .= "Foto por ";
+
+            if ($html) {
+                if ($image_author_url) {
+                    $str .= '<a href="' . $image_author_url . '" title="' . $image_author . '">' . $image_author . '</a>';
+                } else {
+                    $str .= "$image_author ($image_author_url)";
+                }
+            } else {
+                $str .= "$image_author";
+            }
+        }
+
+        if ($page->image_unsplash) {
+            if ($html) {
+                $str .= ' en <a href="https://unsplash.com" title="Unsplash">Unsplash</a>';
+            } else {
+                $str .= ' on Unsplash (https://unsplash.com)';
+            }
+        }
+
+        return $str;
     },
 ];
