@@ -1,5 +1,6 @@
 <?php
 
+use App\Contentful\ContentfulCollection;
 use Illuminate\Support\Str;
 
 return [
@@ -13,8 +14,8 @@ return [
     'collections'     => [
         'posts'      => [
             'author' => 'Rafael Hernandez', // Default author, if not provided in a post
-            'sort'   => '-date',
-            'path'   => 'blog/{filename}',
+            'sort' => '-date',
+            'path' => 'blog/{filename}',
         ],
         'categories' => [
             'path' => '/blog/categories/{filename}',
@@ -22,6 +23,12 @@ return [
                 return $allPosts->filter(function ($post) use ($page) {
                     return $post->categories ? in_array($page->getFilename(), $post->categories, true) : false;
                 });
+            },
+        ],
+        'projects' => [
+//            'extends' => '_layouts.contentful',
+            'items' => function ($config) {
+                return (new ContentfulCollection)->getPosts();
             },
         ],
     ],
