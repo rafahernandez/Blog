@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-<script type="text/javascript" src="https://static.younoodle.com/static/shared/scripts/embed.min.js"></script>
+<script type="text/javascript" src="https://static.younoodle.com/static/shared/scripts/embed_v4.js"></script>
 <script type="text/javascript">
     YouNoodleEmbed.init({
         iframe: 'https://platform.younoodle.com/dashboard/competitions/younoodle_demo_2018',
