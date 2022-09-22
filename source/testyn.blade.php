@@ -8,12 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-<script type=“text/javascript” src=“https://static.younoodle.com/static/shared/scripts/embed.min.js”></script>
-<script type=“text/javascript”>
-YouNoodleEmbed.init({
-    iframe: ‘https://platform.younoodle.com/competition/black_ambition_hbcu_prize_2022/public-vote/ba_hbcu_pv_competition’,
-    width: 720
-});
+<script type="text/javascript" src="https://static.younoodle.com/static/shared/scripts/embed_v4.js"></script>
+<script type="text/javascript">
+    YouNoodleEmbed.init({
+        iframe: 'https://platform.younoodle.com/competition/the_black_ambition_prize_2022/public-vote/ba_pv_competition',
+        width: 1200,
+        height: 720
+    });
 </script>
 </body>
 </html>
