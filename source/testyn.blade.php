@@ -8,12 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-<script type="text/javascript">
-    YouNoodleEmbed.init({
-        iframe: 'https://platform.younoodle.com/competition/the_black_ambition_prize_2022/public-vote/ba_pv_competition',
-        width: 1600,
-        height: 1200
-    });
-</script>
+<iframe src="https://platform.younoodle.com/competition/black_ambition_dummy_round_2/public-vote/black_ambition_dummy_round_2_judging_1" 
+title="Test YN"
+height="1200"
+width="1600"
+></iframe>
 </body>
 </html>
