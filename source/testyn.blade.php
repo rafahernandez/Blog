@@ -11,7 +11,7 @@
 <script type="text/javascript" src="https://static.younoodle.com/static/shared/scripts/embed_v4.js"></script>
 <script type="text/javascript">
     YouNoodleEmbed.init({
-        iframe: 'https://platform.younoodle.com/dashboard/competitions/younoodle_demo_2018',
+        iframe: 'https://platform.younoodle.com/competition/the_black_ambition_prize_2022/public-vote/ba_pv_competition',
         width: 1200,
         height: 720
     });
